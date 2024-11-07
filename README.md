@@ -155,3 +155,8 @@ PlayerBST Class:
 Methods for managing the BST, including insert, delete, search, and display functionalities.
 Main Program:
 Interactively demonstrates the methods in PlayerBST through sample players and operations.
+
+# What the output looks like
+
+![image](https://github.com/user-attachments/assets/53d098a5-821d-45f0-8326-7b117a370b3d)
+
