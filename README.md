@@ -38,10 +38,11 @@ Players.csv
 PlayersData.csv
 Compiling and Running the Program
 Code Walkthrough
-1. Overview
+
+# 1. Overview
 The program creates a database of players where each player has basic attributes, such as ID, Name, Phone Number, Email, and Password. A player can also have games they've played, with each game having attributes like gameid, Ach_un (achievements unlocked), and hrs_pla (hours played). The players are stored in a binary search tree (BST), allowing for efficient insertion, deletion, and retrieval of players based on their IDs.
 
-2. Classes and Structs
+# 2. Classes and Structs
 GamesPlayed Struct
 The GamesPlayed struct represents a game that a player has played, with attributes for:
 
@@ -60,7 +61,7 @@ Games_Played: Pointer to the root node of a BST containing the games played by t
 PlayerBST Class
 The PlayerBST class manages the collection of players in a binary search tree. Its primary functionality is to provide methods to add, delete, search, save, and display players and their associated games.
 
-3. Program Functions
+# 3. Program Functions
 Each function in the PlayerBST class performs a specific role, allowing interaction with the player and game databases.
 
 ins_pl(Player *temp)
@@ -90,7 +91,7 @@ Displays up to N layers of the BST, showing each player in the current layer. Us
 s_path(const string &id)
 Displays the path from the root to the specified player in the BST. If the player is found, it prints "Found!", otherwise it prints "NOT found."
 
-4. Helper Functions
+# 4. Helper Functions
 Several private helper functions are used to assist in performing recursive operations.
 
 ins_pl_rec(Player *NN, Player *pls)
@@ -120,7 +121,7 @@ Recursively displays layers of the BST, limited by the specified layer number.
 s_path_rec(Player *NN, const string &id)
 Recursively finds and prints the path to a specific player in the BST.
 
-5. Main Program Execution
+# 5. Main Program Execution
 The main function interacts with the user and demonstrates the functionalities of the PlayerBST class:
 
 Player Data Insertion: Inserts sample players with IDs and credentials.
@@ -130,3 +131,27 @@ Path Search: Finds and displays the path to a specific player.
 Game Check: Checks if a player has played a specified game.
 Player Deletion: Deletes a player by ID.
 Data Saving: Saves the current BST to a file in pre-order format.
+
+# 6. Files Used
+Players.csv
+The input file containing player details. Each line is structured as follows:
+
+csv
+Copy code
+PlayerID,Name,Phone,Email,Password
+This file should be present in the same directory as the program.
+
+PlayersData.csv
+The output file where player details are saved in pre-order traversal. This file is generated after calling sav_play.
+
+Enter your roll number when prompted to generate a unique random number for skipping lines during file processing.
+
+# 7. Code Walkthrough
+The program's design is modular, with distinct classes for handling players and games, and a BST structure that supports efficient management operations. Here’s a quick walkthrough of each section of code:
+
+Initialization:
+GamesPlayed and Player structs define the data for each game and player.
+PlayerBST Class:
+Methods for managing the BST, including insert, delete, search, and display functionalities.
+Main Program:
+Interactively demonstrates the methods in PlayerBST through sample players and operations.
